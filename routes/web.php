@@ -16,3 +16,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/bible-study-request-form', 'BibleStudyController@form');
+
+Route::post('/bible-study-request-create-form', 'BibleStudyController@createform');
+
+Route::get('/bible-study-requests', 'BibleStudyController@table');
+
+Route::get('/thank-you', 'BibleStudyController@thankyou');
